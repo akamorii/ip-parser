@@ -1,8 +1,12 @@
 import random
 import json
 from unpack_ip import unpack_ip
+import os
+from path import path
+
 # from 0 to 255
 def generation(count = 10):
+    os.chdir(path)
     ip_dict = {}
     rang = (0, 255)
     ip_example = [[],['.'],[],['.'],[],['.'],[]] # 0 2 4 6
@@ -16,6 +20,6 @@ def generation(count = 10):
         ip_dict.update({f'ip {i+1}': unpack_ip(ip_example)})
     with open('ip_examples.json', 'w', encoding='utf-8') as exip:
         json.dump(ip_dict,exip,ensure_ascii=False)
-    # return ip_dict
+
 # print(generation())
-generation()
+# generation()
