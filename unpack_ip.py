@@ -4,7 +4,7 @@ def unpack_ip(ip):
         if type(data) == list:
             data = data[0]
         return data
-    res = [unpack(n) for n in arr]
+    res = [unpack(n) for n in ip]
     string = ''
     for char in res:
         string += str(char)
