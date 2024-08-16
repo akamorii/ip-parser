@@ -1,6 +1,7 @@
 import os
+from path import path
 
-os.chdir("C:/Users/ineve/OneDrive/Рабочий стол/just folder/proga res/python/OS")
+os.chdir(path)
 
 try:
     with open('log.txt', 'r', encoding='utf-8') as file:
